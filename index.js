@@ -39,6 +39,7 @@ module.exports = function(input, options, cb) {
     // marked.js converts '>' to '&gt;'. Here we get the entity back to original character
     body = body.replace(/{{&gt;/g, '{{>');
     body = body.replace(/{{#&gt;/g, '{{#>');
+    body = body.replace(/&quot;/g, '"');
 
     // Find the title of the page by identifying the <h1>
     // The second match is the inner group
